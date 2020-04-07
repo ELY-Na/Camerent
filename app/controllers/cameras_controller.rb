@@ -19,7 +19,7 @@ class CamerasController < ApplicationController
         lat: camera.latitude,
         lng: camera.longitude,
         infoWindow: render_to_string(partial: 'info_window', locals: { camera: camera }),
-        image_url: helpers.asset_url('red.png')
+        image_url: helpers.asset_url('map-marker.png')
       }
     end
   end
