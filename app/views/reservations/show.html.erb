@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: url('<%= cl_image_path @reservation.arcade.photo, height: 300, width: 400, crop: :fill,class: "banner-img"%>')">
+<div class="banner" style="background-image: url('<%= cl_image_path @reservation.camera.photo, height: 300, width: 400, crop: :fill,class: "banner-img"%>')">
   <div class="container">
     <h1>Reservation is done!</h1>
   </div>
@@ -6,14 +6,14 @@
 
 <div class="carding">
   <div class="card-show">
-    ADDRESS:   <%= @reservation.arcade.address %><br>
+    ADDRESS:   <%= @reservation.camera.address %><br>
     DATE:  <%= @reservation.day %>
   </div>
 
 
   <div class="category">
     <%= link_to 'Delete an reservation', reservation_path(@reservation), :method => :delete,class:"btn btn-light"  %>
-    <%= link_to 'Go to main page', arcades_path,class:"btn btn-light" %>
+    <%= link_to 'Go to main page', cameras_path,class:"btn btn-light" %>
   </div>
 </div>
 

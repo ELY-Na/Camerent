@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to arcades_path, class: "navbar-brand" do %>
+  <%= link_to cameras_path, class: "navbar-brand" do %>
   <%= image_tag "red.png" %>
   <% end %>
 
@@ -20,7 +20,7 @@
         <% if user_signed_in? %>
           <%= avatar_image_tag current_user, class: 'avatar', id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "Add a Arcade", new_arcade_path, class: "dropdown-item" %>
+              <%= link_to "Add a camera", new_camera_path, class: "dropdown-item" %>
               <%= link_to "My profil", my_profil_path, class: "dropdown-item" %>
               <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
             </div>

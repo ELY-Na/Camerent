@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   mount_uploader :photo, PhotoUploader
   has_many :reservations
-  has_many :arcades, foreign_key: :owner_id
+  has_many :cameras, foreign_key: :owner_id
 
   validates :name, presence: true
 end

@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-  before_action :set_arcade, only: %i[new create]
+  before_action :set_camera, only: %i[new create]
   before_action :set_reservation, only: %i[show]
 
   def index
@@ -18,7 +18,7 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user
-    @reservation.arcade = @arcade
+    @reservation.camera = @camera
     authorize @reservation
 
     if @reservation.save
@@ -38,8 +38,8 @@ class ReservationsController < ApplicationController
 
   private
 
-  def set_arcade
-    @arcade = Arcade.find(params[:arcade_id])
+  def set_camera
+    @camera = Camera.find(params[:camera_id])
   end
 
   def set_reservation

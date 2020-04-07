@@ -2,8 +2,8 @@
 
 one:
   content: MyText
-  arcade: one
+  camera: one
 
 two:
   content: MyText
-  arcade: two
+  camera: two

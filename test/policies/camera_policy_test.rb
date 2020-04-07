@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ArcadePolicyTest < ActiveSupport::TestCase
+class CameraPolicyTest < ActiveSupport::TestCase
   def test_scope
   end
 

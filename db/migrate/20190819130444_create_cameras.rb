@@ -1,6 +1,6 @@
-class CreateArcades < ActiveRecord::Migration[5.2]
+class CreateCameras < ActiveRecord::Migration[5.2]
   def change
-    create_table :arcades do |t|
+    create_table :cameras do |t|
       t.string :name
       t.string :address
       t.string :city

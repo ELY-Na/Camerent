@@ -1,0 +1,38 @@
+<div class="banner" style="background-image: url('<%= cl_image_path @camera.photo, height: 300, width: 400, crop: :fill,class: "banner-img"%>')">
+  <div class="container">
+    <h1><%= @camera.name %></h1>
+  </div>
+</div>
+<div class="container-reviews">
+  <div class="cardo">
+    <div class="card-show">
+      Address :   <%= @camera.address %><br>
+      Price:  <%= @camera.price %> €<br>
+    </div>
+    <div class="category" style="margin-bottom:30px">
+      <%= link_to 'Reserve',  new_camera_reservation_path(@camera),class:"btn btn-light"  %>
+    </div>
+    <div class="comment" >
+      <%= render 'reviews/form', camera: @camera, review: @review %>
+      </div>
+
+
+  </div>
+
+  <div id="reviews">
+
+
+      <% if @camera.reviews.blank? %>
+        Be the first to leave a review for <%= @camera.name %>
+      <% else %>
+      <h3>Comments</h3>
+      <ul>
+        <% @camera.reviews.each do |review| %>
+         <li> <%= render 'reviews/show', review: review %></li>
+        <% end %>
+      </ul>
+      <% end %>
+
+  </div>
+
+</div>

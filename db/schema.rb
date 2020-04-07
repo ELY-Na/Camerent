@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_23_121115) do
+ActiveRecord::Schema.define(version: 2019_08_23_085535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "arcades", force: :cascade do |t|
+  create_table "cameras", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.bigint "owner_id"
@@ -25,26 +25,25 @@ ActiveRecord::Schema.define(version: 2019_08_23_121115) do
     t.float "price"
     t.float "latitude"
     t.float "longitude"
-    t.integer "capacity"
-    t.index ["owner_id"], name: "index_arcades_on_owner_id"
+    t.index ["owner_id"], name: "index_cameras_on_owner_id"
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.bigint "arcade_id"
+    t.bigint "camera_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "day"
-    t.index ["arcade_id"], name: "index_reservations_on_arcade_id"
+    t.index ["camera_id"], name: "index_reservations_on_camera_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.text "content"
-    t.bigint "arcade_id"
+    t.bigint "camera_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["arcade_id"], name: "index_reviews_on_arcade_id"
+    t.index ["camera_id"], name: "index_reviews_on_camera_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,8 +58,8 @@ ActiveRecord::Schema.define(version: 2019_08_23_121115) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "arcades", "users", column: "owner_id"
-  add_foreign_key "reservations", "arcades"
+  add_foreign_key "cameras", "users", column: "owner_id"
+  add_foreign_key "reservations", "cameras"
   add_foreign_key "reservations", "users"
-  add_foreign_key "reviews", "arcades"
+  add_foreign_key "reviews", "cameras"
 end
