@@ -1,22 +1,25 @@
-.pic {
-  background-image: url('background.jpg')
+#content-wrap {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .signup {
+  padding: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
   position: absolute;
-  width: 500px;
+  width: 350px;
   height: 500px;
   z-index: 15;
-  top: 30%;
-  left: 60%;
-  margin: -150px 0 0 -75px;
 }
 
 .field {
   margin: 5px;
 
   .field_input {
-    width: 100%;
+    width: 70%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -37,11 +40,6 @@
 .act {
   margin:15px;
   margin-left:42%;
-}
-
-.gif {
-  width:500px;
-  margin-left:5%;
 }
 
 .image {
