@@ -1,4 +1,4 @@
-<div class="arcades-show container col-6">
+<div class="cameras-show container col-6">
   <div class=" row justify-content-start col-5 my-5">
     <div class="card-category d-flex">
       <div class="card-photo ">
@@ -18,32 +18,32 @@
       <ul>
       <% res.each do |r|%>
         <li>
-        <%=r.arcade.name%> -
+        <%=r.camera.name%> -
         <%=r.day%> -
-        <%=r.arcade.price%> €</li>
+        <%=r.camera.price%> €</li>
       <%end%>
       </ul>
     </div>
   </div>
 
   <div class="row justify-content-end my-5">
-    <div class="card-category arcades col-5">
-      <h4>My Arcades</h4>
-      <% arcades = Arcade.where("owner_id =#{current_user.id}")%>
+    <div class="card-category cameras col-5">
+      <h4>My cameras</h4>
+      <% cameras = Camera.where("owner_id =#{current_user.id}")%>
       <ul>
-      <% arcades.each do |arcade|%>
+      <% cameras.each do |camera|%>
 
-      <li data-arcade-id="<%= arcade.id %>"><%= link_to arcade.name, arcade_path(arcade) %>
-      <% if policy(arcade).destroy? %>
-                  <button type="button" class="btn btn-red"> <%= link_to "Delete", arcade_path(arcade),
+      <li data-camera-id="<%= camera.id %>"><%= link_to camera.name, camera_path(camera) %>
+      <% if policy(camera).destroy? %>
+                  <button type="button" class="btn btn-red"> <%= link_to "Delete", camera_path(camera),
                   method: :delete,
                   data: { confirm: "Are you sure?" },
                   remote: true
                    %></button>
                   <% end %>
 
-                  <% if policy(arcade).edit? %>
-                  <button type="button" class="btn btn-yellow"><%= link_to "Edit", edit_arcade_path(arcade) %></button>
+                  <% if policy(camera).edit? %>
+                  <button type="button" class="btn btn-yellow"><%= link_to "Edit", edit_camera_path(camera) %></button>
                   <% end %>
 
       </li>

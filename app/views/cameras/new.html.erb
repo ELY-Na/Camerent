@@ -1,11 +1,10 @@
 <div class="adding">
-  <h1>Create Your Arcade Room</h1>
-<%= simple_form_for [@arcade] do |f| %>
+  <h1>Create Your ad</h1>
+<%= simple_form_for [@camera] do |f| %>
   <%= f.text_field :name, placeholder: 'Name', class: "field_in"%>
   <%= f.text_field :address, placeholder: 'Adress', class: "field_in" %>
   <%= f.text_field :price, placeholder: 'Price', class: "field_in" %>
-  <%= f.text_field :capacity, placeholder: 'Maximum capacity', class: "field_in" %>
-  <%= f.input :photo, class: "field_in",label:"Your Arcade's Photo" %>
+  <%= f.input :photo, class: "field_in",label:"Your camera's Photo" %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.submit %>
 <% end %>

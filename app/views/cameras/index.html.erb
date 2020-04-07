@@ -2,29 +2,28 @@
 
   <div class="card-room">
 
-      <% @arcades.each do |arcade| %>
+      <% @cameras.each do |camera| %>
         <div class='card-room-infos'>
 
           <div class='title'>
-            <h2><%=arcade.name.upcase %></h2>
-            <h4 class="card-room-pricing"><%=arcade.price %>€</h4>
+            <h2><%=camera.name.upcase %></h2>
+            <h4 class="card-room-pricing"><%=camera.price %>€</h4>
           </div>
 
           <div class='infos_options'>
 
             <div class='photo'>
-              <%= cl_image_tag arcade.photo, height: 200, width: 240, crop: :fill %>
+              <%= cl_image_tag camera.photo, height: 200, width: 240, crop: :fill %>
             </div>
 
             <div class='infos'>
 
               <div class='address'>
-                <p><%=arcade.address %></p>
-                <p>Capacity : <%=arcade.capacity %></p>
+                <p><%=camera.address %></p>
               </div>
 
               <div class='card-room-options'>
-                <button type="button" class="btn-blue"><%= link_to "See More >", arcade_path(arcade) %></button>
+                <button type="button" class="btn-blue"><%= link_to "See More >", camera_path(camera) %></button>
               </div>
 
             </div>

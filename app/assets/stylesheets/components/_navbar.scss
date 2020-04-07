@@ -1,9 +1,10 @@
 .navbar-lewagon {
+  background-color: #000000e3;
   justify-content: space-between;
 
-
-
-
+  .form-inline {
+    display: block;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,7 +12,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 75px;
 }
 
 

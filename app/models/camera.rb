@@ -1,4 +1,4 @@
-class Arcade < ApplicationRecord
+class Camera < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
@@ -10,7 +10,6 @@ class Arcade < ApplicationRecord
   validates :name, presence: true
   validates :price, presence: true
   validates :photo, presence: true
-  validates :capacity, presence: true
 
   include PgSearch::Model
 

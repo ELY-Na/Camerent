@@ -1,4 +1,4 @@
-class ArcadePolicy < ApplicationPolicy
+class CameraPolicy < ApplicationPolicy
   def show?
     true
   end
