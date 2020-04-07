@@ -1,8 +1,8 @@
 <div class="adding">
-<h2>Make a reservation</h2>
+  <h2>Make a reservation</h2>
 
-<%= simple_form_for [@camera, @reservation ], camera_reservations_path(@reservation) do |f| %>
-  <%= f.input       :day, as: :date, html5:  :true, :input_html => { :class => 'flatpickr' } %>
-  <%= f.button      :submit %>
-<% end %>
+  <%= simple_form_for [@camera, @reservation ] do |f| %>
+    <%= f.input  :day, as: :date, html5:  :true, :input_html => { :class => 'flatpickr' } %>
+    <%= f.button :submit %>
+  <% end %>
 </div>

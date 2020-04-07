@@ -1,7 +1,8 @@
-.pic{
+.pic {
   background-image: url('background.jpg')
 }
-.signup{
+
+.signup {
   position: absolute;
   width: 500px;
   height: 500px;
@@ -9,35 +10,41 @@
   top: 30%;
   left: 60%;
   margin: -150px 0 0 -75px;
-
 }
-.field{
+
+.field {
   margin: 5px;
-  .field_input{
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+
+  .field_input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
   }
 }
-.field_button{
+
+.field_button {
   margin:20px;
   margin-left:0px;
 }
-.actions{
+
+.actions {
   margin:15px;
   margin-left:40%;
 }
-.act{
+
+.act {
   margin:15px;
   margin-left:42%;
 }
-.gif{
+
+.gif {
   width:500px;
   margin-left:5%;
 }
-.image{
+
+.image {
   margin: 40px 150px;
   height: 600px;
 }

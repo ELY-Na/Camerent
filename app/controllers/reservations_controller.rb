@@ -22,8 +22,7 @@ class ReservationsController < ApplicationController
     authorize @reservation
 
     if @reservation.save
-      redirect_to @reservation
-      #reservation_path(@reservation)
+      redirect_to reservation_path(@reservation)
     else
       render :new
     end
