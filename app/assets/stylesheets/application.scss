@@ -13,6 +13,11 @@
 @import "pages/*";
 
 
-body{
+body {
+  height: 100%;
   color: slategray;
+}
+
+a {
+  font-size: 12px;
 }

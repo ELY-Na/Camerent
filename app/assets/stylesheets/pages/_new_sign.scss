@@ -6,21 +6,24 @@
 }
 
 .signup {
+  h2 {
+    font-size: 1.5rem;
+  }
+
   padding: 20px;
   border: 1px solid lightgrey;
   border-radius: 8px;
   position: absolute;
   width: 350px;
-  height: 500px;
+  min-height: 450px;
   z-index: 15;
 }
 
 .field {
-  margin: 5px;
+  font-size: 0.8rem;
 
   .field_input {
     width: 70%;
-    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
@@ -30,19 +33,27 @@
 .field_button {
   margin:20px;
   margin-left:0px;
-}
-
-.actions {
-  margin:15px;
-  margin-left:40%;
-}
-
-.act {
-  margin:15px;
-  margin-left:42%;
+  font-size: smaller;
 }
 
 .image {
   margin: 40px 150px;
   height: 600px;
+}
+
+.actions {
+  font-size: 12px;
+
+  input{
+    // font-size: smaller;
+  }
+}
+
+label {
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+em {
+  font-size: smaller;
 }
